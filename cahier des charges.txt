@@ -14,4 +14,4 @@
 - les photos doivent avoir une légende
 - le vote s'effectuera avec des cases à cocher sur chaque photo
 - le podium doit inclure le nombre de vote reçu et l'étudiant 
-
+- Seuls les étudiants et les profs peuvent voter
