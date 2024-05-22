@@ -1,2 +1,2 @@
 # SAE2.3 - Application Concours Photos
-cette application est developpé en PHP, HTML et CSS.
+cette application est developpée en PHP, HTML et CSS.
