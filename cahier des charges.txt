@@ -1,0 +1,10 @@
+- ajouter des photos sur le site
+- voir la liste des photos
+- voter avec un identifiant unique (adresse ip?)
+- date limite pour l'envoi des photos
+- recherche des photos sur google
+- IHM érgonomique et facilement utilisable
+- affichage des résultats des votes après la date limite
+- page d'accueil pour les informations
+- recherche des photos / participants
+- commmunication claire qui donne envie de participer
