@@ -5,7 +5,7 @@ Par les étudiants du groupe TP2 du BUT1 Réseaux & Télécommunications :
   * Jules Messin
   * Mohamed Yassine Bouchama
   * Milan Todorovic
-  * Wendlassida Bonkougou
+  * Wendlassida Bonkoungou
   * Promisse Miansiantima
 ```
 Ce programme est une collaboration entre les étudiants du BUT Mesures physiques et du BUT Réseaux & Télécoms. Cette application est developpée en PHP, HTML et CSS.
