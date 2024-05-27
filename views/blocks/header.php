@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Appli procédures</title>
-    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    <link rel="stylesheet" type="text/css" href="./layout/global.css" />
 </head>
 
 <body>
