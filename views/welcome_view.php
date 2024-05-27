@@ -1,4 +1,4 @@
-<?php require('header.php')?>
+<?php require('./views/blocks/header.php')?>
 
 <h2>IUT CHATELLERAULT</h2>
 <h2>Concours photo</h2>
@@ -26,15 +26,15 @@
    <li><p>3ÈME PRIX : 80 EUROS</p></li>
 </ul>
 
-<a href="http://www.instagram.com">
- <img src="./images/instagram.jpg" />
+<a href="http://www.instagram.com/">
+ <img src="./layout/images/instagram.jpg" />
 </a>
 
 <a href="tel:123-456-7890">
- <img src="./images/phone.jpg" />
+ <img src="./layout/images/phone.jpg" />
 </a>
 
 
 <?php 
 
-require('footer.php');
+require('./views/blocks/footer.php');
