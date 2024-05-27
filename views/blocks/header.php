@@ -17,7 +17,7 @@
             <li><a href="index.php?route=resultats">Résultats</a></li>
             <div class="search-bar">
                 <input type="text" placeholder="Rechercher des photos...">
-                <button type="submit"></button>
+                <button type="submit"><i class="fa fa-search"></i> </button>
             </div>
         </ul>
     </nav>
