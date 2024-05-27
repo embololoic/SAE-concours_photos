@@ -1,9 +1,40 @@
 <?php require('header.php')?>
 
-<h2>Page d'accuel</h2>
-<p><em>En cours de développement...</em></p>
-<p>Pour le moment la seule possibilité est de s'assurer que le site fonctionne..<p>
+<h2>IUT CHATELLERAULT</h2>
+<h2>Concours photo</h2>
 
-<?php
+<p>Bienvenue au Concours Photo "Châtellerault sous tous ses angles" !</p>
+
+<p>Découvrez la magie de Châtellerault à travers l'objectif de votre appareil photo !</p>
+
+<p>Notre concours vous invite à explorer la diversité de la ville sous des perspectives uniques. Que vous capturiez des scènes de vie de quartier, l'architecture emblématique ou des instants quotidiens, chaque photo est une chance de monter votre talent</p>
+
+<button onclick="location.href='???'">Participer</button></div>
+
+<p>COMMENT PARTICIPER :</p>
+<ul>
+   <li><p>INSCRIVEZ-VOUS AVEC VOTRE IDENTIFIANT ETUDIANT POUR OBTENIR ACCÈS EXCLUSIF</p></li>
+   <li><p>UTILISEZ LE QR CODE OU LE LIEN URL POUR ACCÉDER À LA PLATEFORME DE DÉPÔT DES PHOTOS</p></li>
+   <li><p>SOUMETTEZ VOTRE MEILLEURE PHOTO DE CHÂTELLERAULT EN RESPECTANT LE THÉME</p></li>
+   <li><p>AJOUTER UN TITRE CAPTIVANT À VOTRE ŒUVRE POUR LA METTRE EN VALEUR</p></li>
+</ul>
+
+<p>PRIX À REMPORTER :</p>
+<ul>
+   <li><p>1ER PRIX : 100 EUROS</p></li>
+   <li><p>2ÈME PRIX : 80 EUROS</p></li>
+   <li><p>3ÈME PRIX : 80 EUROS</p></li>
+</ul>
+
+<a href="http://www.instagram.com">
+ <img src="./images/instagram.jpg" />
+</a>
+
+<a href="tel:123-456-7890">
+ <img src="./images/phone.jpg" />
+</a>
+
+
+<?php 
+
 require('footer.php');
-
