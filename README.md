@@ -41,6 +41,3 @@ Le code CSS de la page et les images utilisées.
 ### index.php
 ---
 L'index est le contrôleur de toute l'architecture MVC utilisée (chef de l'orchestre).
-
-
-test les brothers
