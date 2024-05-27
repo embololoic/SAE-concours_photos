@@ -73,6 +73,11 @@ nav {
 }
 body {
     font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .instructions {
     font-weight: bold;
@@ -144,4 +149,28 @@ body {
 .participate-btn:hover {
     background-color: mediumaquamarine;
     color: beige;
+}
+
+
+
+footer {
+    background-color: mediumaquamarine;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-content span {
+    margin-right: 10px;
+}
+
+.footer-img {
+    margin: 0 10px;
+    max-height: 50px;
 }
