@@ -12,7 +12,8 @@
 
 <button onclick="location.href='???'">Participer</button></div>
 
-<div class="div-page"><p>COMMENT PARTICIPER :</p>
+<div class="div-page">
+    <p>COMMENT PARTICIPER :</p>
 <ol class="instructions">
    <li><p>INSCRIVEZ-VOUS AVEC VOTRE IDENTIFIANT ETUDIANT POUR OBTENIR ACCÈS EXCLUSIF</p></li>
    <li><p>UTILISEZ LE QR CODE OU LE LIEN URL POUR ACCÉDER À LA PLATEFORME DE DÉPÔT DES PHOTOS</p></li>
