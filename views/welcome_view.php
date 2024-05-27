@@ -1,6 +1,7 @@
 <?php require('./views/blocks/header.php')?>
-
-<h2>IUT CHATELLERAULT</h2>
+<div id="bandeau">
+    <h2 class="titre">IUT CHATELLERAULT</h2>
+</div>
 <h2>Concours photo</h2>
 
 <p>Bienvenue au Concours Photo "Châtellerault sous tous ses angles" !</p>
@@ -12,7 +13,7 @@
 <button onclick="location.href='???'">Participer</button></div>
 
 <p>COMMENT PARTICIPER :</p>
-<ul>
+<ul class="instructions">
    <li><p>INSCRIVEZ-VOUS AVEC VOTRE IDENTIFIANT ETUDIANT POUR OBTENIR ACCÈS EXCLUSIF</p></li>
    <li><p>UTILISEZ LE QR CODE OU LE LIEN URL POUR ACCÉDER À LA PLATEFORME DE DÉPÔT DES PHOTOS</p></li>
    <li><p>SOUMETTEZ VOTRE MEILLEURE PHOTO DE CHÂTELLERAULT EN RESPECTANT LE THÉME</p></li>

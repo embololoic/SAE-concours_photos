@@ -60,6 +60,30 @@ nav {
     border: none;
     cursor: pointer;
 }
+body {
+    font-family: Helvetica, sans-serif;
+}
+.instructions {
+    font-weight: bold;
+    list-style-type: none;
+    text-align: center;
+}
+
+.titre {
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 
+}
 
+#bandeau {
+    background-image: url("https://media.istockphoto.com/id/821084184/fr/photo/chatellerault-france.jpg?s=612x612&w=0&k=20&c=v2kloX7jH23Kq5HjFS_AkQIg_3j1fx-Nw--l-0nqqO8=");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
