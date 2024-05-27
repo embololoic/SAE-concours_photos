@@ -19,6 +19,18 @@
     font-style: italic;
 }
 
+@keyframes boldAnimation {
+    0% {
+        font-weight: normal;
+    }
+    50% {
+        font-weight: bold;
+    }
+    100% {
+        font-weight: normal;
+    }
+}
+
 main {
     flex: 1;
 }
@@ -31,6 +43,15 @@ nav ul {
 
 nav ul li {
     display: inline-block;
+    padding: 7px;
+    transition: font-weight 1s ease-in-out;
+}
+
+nav ul li:hover {
+    display: inline-block;
+    padding: 7px;
+    font-weight: bold;
+    animation: boldAnimation 1s ease-in-out infinite;
 }
 
 nav ul li a {
@@ -59,18 +80,21 @@ nav {
 
 .search-bar {
     float: right;
+    padding: 7px;
 }
 
 .search-bar input[type=text] {
     padding: 6px;
     font-size: 16px;
-    border: solid 1px;
+    border: solid 0.5px;
+    border-radius: 5px;
 }
 
 .search-bar button {
     padding: 6px 10px;
     background: #ddd;
     font-size: 16px;
+    border-radius: 5px;
     border: none;
     cursor: pointer;
 }
