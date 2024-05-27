@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Concours Photo</title>
     <link rel="stylesheet" type="text/css" href="./layout/global.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46Z">
 </head>
 
 <body>
