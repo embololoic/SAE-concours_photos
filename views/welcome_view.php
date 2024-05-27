@@ -13,19 +13,19 @@
 <button onclick="location.href='???'">Participer</button></div>
 
 <p>COMMENT PARTICIPER :</p>
-<ul class="instructions">
+<ol class="instructions">
    <li><p>INSCRIVEZ-VOUS AVEC VOTRE IDENTIFIANT ETUDIANT POUR OBTENIR ACCÈS EXCLUSIF</p></li>
    <li><p>UTILISEZ LE QR CODE OU LE LIEN URL POUR ACCÉDER À LA PLATEFORME DE DÉPÔT DES PHOTOS</p></li>
    <li><p>SOUMETTEZ VOTRE MEILLEURE PHOTO DE CHÂTELLERAULT EN RESPECTANT LE THÉME</p></li>
    <li><p>AJOUTER UN TITRE CAPTIVANT À VOTRE ŒUVRE POUR LA METTRE EN VALEUR</p></li>
-</ul>
+</ol>
 
 <p>PRIX À REMPORTER :</p>
-<ul>
+<ol>
    <li><p>1ER PRIX : 100 EUROS</p></li>
    <li><p>2ÈME PRIX : 80 EUROS</p></li>
    <li><p>3ÈME PRIX : 80 EUROS</p></li>
-</ul>
+</ol>
 
 <a href="http://www.instagram.com/">
  <img src="./layout/images/instagram.jpg" />
