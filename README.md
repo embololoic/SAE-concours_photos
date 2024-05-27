@@ -1,6 +1,6 @@
 # SAE2.3 - Application Concours Photos
 ```
-Par les étudiants du groupe TP2 du BUT1 Réseaux & Télécommunications : 
+Par les étudiants du groupe TP2 du BUT1 Réseaux & Télécommunications :
   * Loic Embolo Fouda
   * Jules Messin
   * Mohamed Yassine Bouchama
@@ -17,7 +17,7 @@ L'application suit une architecture MVC (Modèle - Vue - Contrôleur).
 
 Config : <_détails base de données_>
 
-### Contrôleurs 
+### Contrôleurs
 ---
 Il y a un contrôleur pour chaque page de l'application (présente dans le nav)
 - Contrôleur pour l'affichage des photos
@@ -27,7 +27,7 @@ Il y a un contrôleur pour chaque page de l'application (présente dans le nav)
 
 ### CRUD (models)
 ---
-Il existe un pour chaque fonction du programme 
+Il existe un pour chaque fonction du programme
 _<en cours..>_
 
 ### Views (les vues)
@@ -41,3 +41,6 @@ Le code CSS de la page et les images utilisées.
 ### index.php
 ---
 L'index est le contrôleur de toute l'architecture MVC utilisée (chef de l'orchestre).
+
+
+test les brothers
