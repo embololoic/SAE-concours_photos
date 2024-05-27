@@ -28,15 +28,15 @@
    <li><p>3ÈME PRIX : 80 EUROS</p></li>
 </ol>
 </div>
+<section id="links">
+    <a href="http://www.instagram.com/">
+        <i class="fab fa-instagram"></i>
+    </a>
 
-<a href="http://www.instagram.com/">
- <img src="./layout/images/instagram.jpg" />
-</a>
-
-<a href="tel:123-456-7890">
- <img src="./layout/images/phone.jpg" />
-</a>
-
+    <a href="tel:123-456-7890">
+        <i class="fa fa-phone"></i>
+    </a>
+</section>
 
 <?php 
 

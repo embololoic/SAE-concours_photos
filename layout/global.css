@@ -98,3 +98,15 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+#links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 30px;
+}
+
+#links i {
+    font-size: 2rem;
+}
