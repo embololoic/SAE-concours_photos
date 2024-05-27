@@ -9,7 +9,6 @@
 <body>
 <header>
 	<a href="./index.php?req=welcome_view"><img src="images/idea.png" alt="Retour vers la page d'accueil" /></a>
-	<h1>Councours photo</h1>
 	<nav>
         <ul>
             <li><a href="index.php?route=participer">Participer</a></li>
