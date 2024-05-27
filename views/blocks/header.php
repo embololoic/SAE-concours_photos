@@ -10,7 +10,7 @@
 <header>
 	<nav>
         <ul>
-            <li><a href="./index.php?req=welcome_view"><img src="images/idea.png" alt="Retour vers la page d'accueil" /></a></li>
+            <li><a href="./index.php?req=welcome_view"><img src="./layout/images/idea.png" alt="Retour vers la page d'accueil" /></a></li>
             <li><a href="index.php?route=participer">Participer</a></li>
             <li><a href="index.php?route=voter">Voter</a></li>
             <li><a href="index.php?route=resultats">Résultats</a></li>
