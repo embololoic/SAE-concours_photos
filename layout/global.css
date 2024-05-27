@@ -108,5 +108,40 @@ body {
 }
 
 #links i {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: mediumaquamarine;
+    border: solid mediumaquamarine 2.5px;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+#links h3 {
+    color: mediumaquamarine;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+
+.part-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.participate-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: beige;
+    color: mediumaquamarine;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: solid mediumaquamarine 0.5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.participate-btn:hover {
+    background-color: mediumaquamarine;
+    color: beige;
 }

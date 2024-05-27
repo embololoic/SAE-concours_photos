@@ -10,8 +10,9 @@
 
 <p>Notre concours vous invite à explorer la diversité de la ville sous des perspectives uniques. Que vous capturiez des scènes de vie de quartier, l'architecture emblématique ou des instants quotidiens, chaque photo est une chance de monter votre talent</p>
 
-<button onclick="location.href='???'">Participer</button></div>
-
+<div class="part-btn-container">
+    <button class="participate-btn" onclick="location.href='???'">>>Participer<<</button></div>
+</div>
 <div class="div-page">
     <p>COMMENT PARTICIPER :</p>
 <ol class="instructions">
@@ -29,6 +30,7 @@
 </ol>
 </div>
 <section id="links">
+    <h3>Contact :</h3>
     <a href="http://www.instagram.com/">
         <i class="fab fa-instagram"></i>
     </a>
