@@ -1,1 +1,65 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./layout/font/Helvetica.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./layout/font/Helvetica-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./layout/font/Helvetica-BoldOblique.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav {
+    font-family: Helvetica, sans-serif;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    float: right;
+}
+
+.search-bar input[type=text] {
+    padding: 6px;
+    font-size: 16px;
+    border: solid 1px;
+}
+
+.search-bar button {
+    padding: 6px 10px;
+    background: #ddd;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+
 
