@@ -43,6 +43,17 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.div-page {
+    padding: 25px;
+    background-color: rgb(127,255,212, 0.5);
+    margin: 20px auto;
+    border-radius: 12px;
+    border: solid mediumaquamarine 2px;
+    max-width: 600px;
+    width: 80%;
+}
+
+
 .search-bar {
     float: right;
 }
@@ -72,7 +83,7 @@ body {
 .titre {
     text-align: center;
     color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 5px 12px rgba(0, 0, 0, 0.9);
 
 
 }
