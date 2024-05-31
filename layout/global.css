@@ -42,36 +42,60 @@ main {
     flex: 1;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    padding: 7px;
-    font-weight: normal;
-}
-nav ul li:hover,
-nav ul li:active {
-    font-weight: bold;
-    animation: boldAnimation 0.001s ease-in-out infinite;
-}
-
-nav ul li a {
-    display: block;
-    padding: 10px 16px;
-    text-decoration: none;
-    color: #333;
-}
-
 nav {
     padding-left: 10px;
     padding-right: 10px;
     font-family: Helvetica, sans-serif;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Ajoutez cette propriété pour centrer les éléments */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+nav li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+nav ul li {
+    display: inline-block;
+    padding: 7px;
+    font-weight: normal;
+    margin-left: auto;
+}
+
+nav ul li:hover{
+    font-weight: bold;
+    animation: boldAnimation 1s ease-in-out infinite;
+}
+
+nav ul li a {
+    display: block;
+    justify-content: flex-start;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul li.centered {
+    text-align: center;
+    padding: 7px 0;
+    margin: 0 2px;
+
+}
+
+nav ul li.centered a {
+    padding: 10px 0; /* Réduisez le padding horizontal pour centrer le texte */
+    display: inline-block;
+    vertical-align: middle;
+    display: flex; /* Utilisez flexbox pour aligner les éléments */
+    justify-content: center; /* Espacer les éléments de manière égale */
 }
 
 .div-page {

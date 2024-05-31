@@ -1,9 +1,9 @@
-<?php require('./views/blocks/header.php')?>
+<?php require('./views/blocks/header.php') ?>
 
 <body>
 <div class="upload-form">
     <h1>Uploader une photo</h1>
-    <form action="./index.php?=upload" method="post" enctype="multipart/form-data">
+    <form action="./index.php?route=upload" method="post" enctype="multipart/form-data">
         <label for="photo">Sélectionner votre photo :</label>
         <input type="file" id="photo" name="photo" accept="image/*" required>
         <br><br>
@@ -12,6 +12,11 @@
         <br><br>
         <input type="submit" value="Participer!">
     </form>
+    <?php if (isset($error_message)) { ?>
+        <p style="color: red; padding: 12px;"><?php echo $error_message; ?></p>
+    <?php } else if(isset($success_message)) {?>
+    <p style="color: green; padding: 12px;"><?php echo $success_message; ?></p>
+    <?php } ?>
 </div>
 </body>
 

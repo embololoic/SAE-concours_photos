@@ -1,7 +1,7 @@
 <?php
 // affichage des erreurs (periode de developpement)
-error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
-ini_set('display_errors', 1);
+//error_reporting(~E_STRICT);
+//ini_set('display_errors', 1);
     //The front root controller
 
     //The requested route
@@ -22,12 +22,14 @@ ini_set('display_errors', 1);
 
         case 'upload':
             require('control/ctrl_photo.php');
-            upload_photo();
+            upload_photo_controller();
             break;
+
         case 'photos';
             require('control/ctrl_photo.php');
             list_photo();
             break;
+
         case 'voter':
             require('control/ctrl_photo.php');
             list_photo();
