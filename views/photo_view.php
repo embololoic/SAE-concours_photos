@@ -3,14 +3,25 @@
 <h2>Etudiants et professeurs de l'IUT, votre voix compte! 
   Rejoignez-nous pour voter et sélectionner la meilleure phote de ce concours exceptionnel.</h2>
 <table>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-  </tr>
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Photo</th>
+    </tr>
+    <?php
+    if ($result->num_rows > 0) {
+        // Afficher les données de chaque ligne
+        while($row = $result->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>" . $row["id"] . "</td>";
+            echo "<td>" . $row["nom"] . "</td>";
+            echo "<td><div class='img-container'><img src='" . $row["chemin"] . "' alt='" . $row["nom"] . "'></div></td>";
+            echo "</tr>";
+        }
+    } else {
+        echo "<tr><td colspan='3'>Aucune photo trouvée</td></tr>";
+    }
+    ?>
 </table>
 <fieldset>
   <caption>TEMPS RESTANT ...</caption>
