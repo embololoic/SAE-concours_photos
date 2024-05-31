@@ -204,7 +204,14 @@ body {
     width: 25%;
     margin: auto;
     text-align: center;
+    align-content: center;
     font-family: 'Rethink Sans', sans-serif;
+}
+
+.photo-list table {
+    margin: auto;
+    text-align: center;
+    align-content: center;
 }
 
 .photo-list{
