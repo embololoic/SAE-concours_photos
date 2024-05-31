@@ -35,8 +35,8 @@ Il y a un contrôleur pour chaque page de l'application (présente dans le nav)
 ### CRUD (models)
 ---
 Il existe un pour chaque fonction du programme
- **CRUD gestion de photos :**
-   photo_model.php : la récupération des méta-données des photos dans la base de données (**fetch_photos()**) et l'ajout des méta-données uploadées dans la BD (**insert_photo()**)
+**CRUD gestion de photos :**
+ photo_model.php : la récupération des méta-données des photos dans la base de données (**fetch_photos()**) et l'ajout des méta-données uploadées dans la BD (**insert_photo()**)
 
 ### Views (les vues)
 ---
