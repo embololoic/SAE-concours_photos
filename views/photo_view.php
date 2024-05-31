@@ -1,5 +1,5 @@
-<?php require('header.php')?>
-
+<?php require('./views/blocks/header.php')?>
+<div class="photo-list">
 <h2>Etudiants et professeurs de l'IUT, votre voix compte! 
   Rejoignez-nous pour voter et sélectionner la meilleure phote de ce concours exceptionnel.</h2>
 <table>
@@ -13,7 +13,7 @@
   </tr>
 </table>
 <fieldset>
-  <caption>Temps restant ...</caption>
+  <caption>TEMPS RESTANT ...</caption>
   <table>
   <tr>
     <td style="border:1px solid black"></td>
@@ -25,5 +25,6 @@
   </tr>
   </table>
 </fieldset>
+</div>
 <?php
-require('footer.php');
+require('./views/blocks/footer.php');

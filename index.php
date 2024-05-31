@@ -20,6 +20,13 @@ ini_set('display_errors', 1);
             require('control/ctrl_photo.php');
             upload_photo();
             break;
+        case 'photos';
+            require('control/ctrl_photo.php');
+            list_photo();
+            break;
+        case 'voter':
+            require('control/ctrl_vote.php');
+            break;
 
       # les controleurs :
         default:
