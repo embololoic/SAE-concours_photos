@@ -19,6 +19,21 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: "Rethink";
+    src: url("./layout/font/RethinkSans-VariableFont.ttf") format("woff2-variations");
+    font-weight: 100 900; /* Supported weight range */
+    font-style: normal; /* Supported style range */
+}
+
+@font-face {
+    font-family: "Rethink-Italic";
+    src: url("./layout/font/RethinkSans-Italic-VariableFont.ttf") format("woff2-variations");
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+
 @keyframes boldAnimation {
     0% {
         font-weight: normal;
