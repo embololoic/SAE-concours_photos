@@ -193,7 +193,20 @@ body {
     color: beige;
 }
 
+.upload-form {
+    font-family: Helvetica, sans-serif;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+}
 
+.upload-form label {
+    font-weight: 350;
+}
+
+.upload-form h1 {
+    text-align: center;
+}
 
 footer {
     background-color: mediumaquamarine;
@@ -217,3 +230,4 @@ footer {
     margin: 0 10px;
     max-height: 50px;
 }
+
