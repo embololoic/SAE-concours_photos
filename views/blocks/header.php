@@ -12,7 +12,7 @@
 	<nav>
         <ul>
             <li><a href="./index.php?req=welcome_view"><i class="fa fa-lightbulb"></i></a></li>
-            <li><a href="index.php?route=participer">Participer</a></li>
+            <li><a href="./index.php?route=upload">Participer</a></li>
             <li><a href="index.php?route=voter">Voter</a></li>
             <li><a href="index.php?route=resultats">Résultats</a></li>
             <div class="search-bar">
