@@ -17,9 +17,10 @@ ini_set('display_errors', 1);
             break;
 
         case 'upload':
-            require('views/upload_view.php');
-           // photo_upload();
+            require('control/ctrl_photo.php');
+            upload_photo();
             break;
+
       # les controleurs :
         default:
             require('views/404_view.php');
