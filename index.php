@@ -16,6 +16,10 @@ ini_set('display_errors', 1);
             require('views/welcome_view.php');
             break;
 
+        case 'welcome':
+            require('views/welcome_view.php');
+            break;
+
         case 'upload':
             require('control/ctrl_photo.php');
             upload_photo();
@@ -35,4 +39,3 @@ ini_set('display_errors', 1);
 
 
     }
-
