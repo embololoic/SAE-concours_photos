@@ -6,7 +6,6 @@ function upload_photo(){
     //database:
     require('./models/connection.php');
     $c = connection();
-    require('./models/model_photo.php');
     //upload_photo();
 
     //view HTML
@@ -15,10 +14,12 @@ function upload_photo(){
 }
 
 function list_photo(){
+    // get connection
     require('./models/connection.php');
     $c = connection();
-    require('./models/model_photo.php');
-    //upload_photo();
+    // call CRUD
+    require('./models/photo_model.php');
+    $photos = fetch_photos($c);
 
     //view HTML
     require('./views/photo_view.php');

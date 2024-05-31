@@ -1,15 +1,21 @@
 <?php require('./views/blocks/header.php')?>
 <div id="bandeau">
     <h2 class="titre">IUT CHATELLERAULT</h2>
+    <h4 class="titre-2">Université de Poitiers - IUT Poitiers-Niort-Châtellerault</h4>
 </div>
-<h2>Concours photo</h2>
-
-<p>Bienvenue au Concours Photo "Châtellerault sous tous ses angles" !</p>
-
-<p>Découvrez la magie de Châtellerault à travers l'objectif de votre appareil photo !</p>
-
-<p>Notre concours vous invite à explorer la diversité de la ville sous des perspectives uniques. Que vous capturiez des scènes de vie de quartier, l'architecture emblématique ou des instants quotidiens, chaque photo est une chance de monter votre talent</p>
-
+<article id="welcome-text">
+    <h2>CONCOURS PHOTO</h2>
+    <div class="paragraph-container">
+    <i class="fas fa-caret-right"></i><p>Bienvenue au Concours Photo "Châtellerault sous tous ses angles" !</p>
+    </div>
+    <div class="paragraph-container">
+    <i class="fas fa-caret-right"></i><p>Découvrez la magie de Châtellerault à travers l'objectif de votre appareil photo !</p>
+    </div>
+    <div class="paragraph-container">
+    <i class="fas fa-caret-right"></i><p>Notre concours vous invite à explorer la diversité de la ville sous des perspectives uniques. Que vous capturiez des scènes de vie de quartier, l'architecture emblématique ou des instants quotidiens, chaque photo est une chance de montrer votre talent!</p>
+    </div>
+    <span class="attention-span">VOUS ATTENDEZ QUOI? PARTICIPEZ MAINTENANT : </span>
+</article>
 <div class="part-btn-container">
     <button class="participate-btn" onclick="location.href='?route=upload'">>>Participer<<</button></div>
 </div>
