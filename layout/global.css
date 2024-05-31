@@ -29,7 +29,7 @@
 @font-face {
     font-family: "Rethink-Italic";
     src: url("./layout/font/RethinkSans-Italic-VariableFont.ttf") format("woff2-variations");
-    font-weight: 100 900;
+    font-weight: 50 900;
     font-style: italic;
 }
 
