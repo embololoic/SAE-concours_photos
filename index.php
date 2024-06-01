@@ -35,6 +35,11 @@
             list_photo();
             break;
 
+        case 'resultats':
+            require('control/ctrl_vote.php');
+            fetch_votes();
+            break;
+
 
       # les controleurs :
         default:
