@@ -1,7 +1,7 @@
 <?php require('./views/blocks/header.php');?>
 
 <div class="photo-list">
-    <h2>Etudiants et professeurs de l'IUT, votre voix compte Rejoignez-nous pour voter et sélectionner la meilleure photo de ce concours exceptionnel.</h2>
+    <h2>Etudiants et professeurs de l'IUT, votre voix compte! Rejoignez-nous pour voter et sélectionner la meilleure photo de ce concours exceptionnel.</h2>
     <div class="gallery-container">
         <?php
         foreach ($photos as $photo) {

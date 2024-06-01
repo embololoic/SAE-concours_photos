@@ -1,6 +1,7 @@
 <?php require('./views/blocks/header.php') ?>
 
 <body>
+<div class="container">
 <div class="upload-form">
     <h1>Uploader une photo</h1>
     <form action="./index.php?route=upload" method="post" enctype="multipart/form-data">
@@ -17,7 +18,7 @@
     <?php } else if(isset($success_message)) {?>
     <p style="color: green; padding: 12px;"><?php echo $success_message; ?></p>
     <?php } ?>
-</div>
+</div></div>
 </body>
 
 <?php
