@@ -32,7 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             } else {
                 $error_login = "Mot de passe incorrect.";
                 require('./views/login_view.php');
-
             }
         } else {
             $error_login = "Utilisateur n'existe pas";
