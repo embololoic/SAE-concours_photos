@@ -1,5 +1,3 @@
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
 
 <?php
 session_start();
@@ -30,10 +28,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 header('Location: vote.php');
                 exit();
             } else {
-                echo "<p>Incorrect login or password.</p>";
+                require('./views/login_view.php');
+                echo "<p>Mot de passe incorrect.</p>";
             }
         } else {
-            echo "<p>User not found.</p>";
+            require('./views/login_view.php');
+            echo "<p>Utilisateur n'existe pas</p>";
         }
         ldap_close($connex);
     } else {
