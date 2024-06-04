@@ -30,7 +30,7 @@
       </table>
         <script>
             // la date limite
-            const targetDate = new Date('2024-06-04T00:00:00');
+            const targetDate = new Date('2024-06-30T00:00:00');
     
             function updateCountdown() {
                 const currentDate = new Date();
