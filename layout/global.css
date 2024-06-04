@@ -297,7 +297,13 @@ nav {
     background-color: var(--primary-color);
     color: #fff;
     padding: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-icon {
+    flex: 0 1 auto;
+    margin-left: 25px;
 }
 
 nav ul {
@@ -306,6 +312,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
@@ -317,11 +324,36 @@ nav ul li a {
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: text-decoration 0.4s linear;
+}
+
+.search-bar {
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+.search-text{
+    background-color: transparent;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    padding: 5px;
+    transition: border-bottom 0.3s ease;
+
+}
+
+.search-text:focus {
+    border-bottom: 2px solid white;
 }
 
 nav ul li a:hover {
-    background-color: var(--secondary-color);
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 .photo-list {
@@ -532,22 +564,29 @@ footer {
     text-decoration: underline;
 }
 /* Accessibility */
+input[type="text"]
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 input[type="text"]::placeholder {
     font-family: inherit;
-    color: var(--font-color);
+    color: whitesmoke;
+    opacity: 0.7;
     opacity: 0.7;
 }
 
 /* Accessibility */
 input[type="text"]:-ms-input-placeholder {
     font-family: inherit;
-    color: var(--font-color) !important;
+    color: whitesmoke !important;
 }
 
 /* Accessibility */
 input[type="text"]::-ms-input-placeholder {
     font-family: inherit;
-    color: var(--font-color) !important;
+    color: whitesmoke  !important;
 }
 
 /* Accessibility */
@@ -571,7 +610,7 @@ input[type="text"]:-webkit-autofill,
 input[type="text"]:-webkit-autofill:hover,
 input[type="text"]:-webkit-autofill:focus,
 input[type="text"]:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 1000px white inset;
+    -webkit-text-fill-color: var(--font-color);
     -webkit-text-fill-color: var(--font-color);
 }
 

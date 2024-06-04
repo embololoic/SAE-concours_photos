@@ -11,14 +11,14 @@
             </div>
         </section>
 
-        <nav aria-label="Navigation principale">
+        <!--<nav aria-label="Navigation principale">
             <ul>
                 <li><a href="#welcome">Concours Photo</a></li>
                 <li><a href="#instructions">Comment participer</a></li>
                 <li><a href="#prizes">Prix à remporter</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        </nav>-->
 
         <section id="welcome">
             <article id="welcome-text">
