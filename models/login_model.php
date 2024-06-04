@@ -1,3 +1,7 @@
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
+
 
 <?php
 session_start();
@@ -18,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $req = 'supannAliasLogin=' . $login;
         $res = ldap_search($connex, ROOT, $req);
         $entries = ldap_get_entries($connex, $res);
-        
+
         if ($entries['count'] > 0) {
             $uid = $entries[0]['uid'][0];
             $dn = 'uid=' . $uid . ',' . ROOT;
@@ -39,21 +43,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
-    <form action="login.php" method="post">
-        <label for="login">Login:</label>
-        <input type="text" id="login" name="login" required>
-        <br>
-        <label for="pass">Password:</label>
-        <input type="password" id="pass" name="pass" required>
-        <br>
-        <input type="submit" value="Login">
-    </form>
-</body>
-</html>
