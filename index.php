@@ -1,7 +1,7 @@
 <?php
 // affichage des erreurs (periode de developpement)
-//error_reporting(~E_STRICT);
-//ini_set('display_errors', 1);
+error_reporting(~E_STRICT);
+ini_set('display_errors', 1);
     //The front root controller
 
     //The requested route
@@ -13,7 +13,7 @@
     //We switch to the good controller
     switch ($route) {
         case null:
-            require('views/welcome_view.php');
+            require('views/login_view.php');
             break;
 
         case 'welcome':
@@ -39,6 +39,12 @@
             require('control/ctrl_vote.php');
             fetch_votes();
             break;
+
+        case 'login':
+            require('control/ctrl_login.php');
+            user_login();
+            break;
+
 
 
       # les controleurs :
