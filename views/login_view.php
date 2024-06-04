@@ -15,6 +15,7 @@
             <label for="pass">Mot de passe :</label><input type="password" id="pass" name="pass" />
             <input type="submit" value="Valider">
         </form>
+        <p><?php echo $error_login; ?></p>
     </div>
 
 </body>

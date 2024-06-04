@@ -1,7 +1,7 @@
 <?php
 // affichage des erreurs (periode de developpement)
-error_reporting(~E_STRICT);
-ini_set('display_errors', 1);
+//error_reporting(~E_STRICT);
+//ini_set('display_errors', 1);
     //The front root controller
 
     //The requested route
