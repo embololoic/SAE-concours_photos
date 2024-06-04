@@ -9,3 +9,13 @@ function user_login()
     $photos = login_ldap($connex);
 
 }
+
+function check_login()
+{
+        session_start();
+        if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
+              header("Location: ./index.php");
+              exit();
+        }
+
+}
