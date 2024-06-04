@@ -27,9 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if (ldap_bind($connex, $dn, $pass)) {
                 $_SESSION['user_id'] = $uid;
-                header('Location: vote.php');
+                header('Location: ./index.php?route=welcome');
                 exit();
             } else {
+
                 echo "<p>Incorrect login or password.</p>";
             }
         } else {
