@@ -1,16 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
 
 :root {
-    --primary-color: #035453;
-    --secondary-color: #048b7b;
-    --accent-color: #05b4b4;
+    --primary-color: #e74c3c;
+    --secondary-color: #b3b2b2;
+    --accent-color: #b1b1b1;
     --font-color: #333333;
-    --font-family: 'Rethink Sans', sans-serif;
+    --font-family: 'Nunito Sans', sans-serif;
 }
 
 body {
     font-family: var(--font-family);
     color: var(--font-color);
+    background-color: #f3f3f3;
     margin: 0;
     line-height: 1.6;
 }
@@ -294,8 +295,12 @@ ol li::before {
 }
 
 nav {
-    background-color: var(--primary-color);
-    color: #fff;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: white;
+    border-radius: 15px;
+    color: #000000;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -304,6 +309,7 @@ nav {
 .title-icon {
     flex: 0 1 auto;
     margin-left: 25px;
+    font-size: 1.5rem;
 }
 
 nav ul {
@@ -320,12 +326,19 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: text-decoration 0.4s linear;
+    transition: font-weight 0.4s ease;
 }
+
+nav ul li a:hover, nav ul li a:focus {
+    font-weight: bold;
+    text-underline-offset: 5px;
+}
+
+
 
 .search-bar {
     background-color: transparent;
@@ -343,18 +356,15 @@ nav ul li a {
     appearance: none;
     border: none;
     padding: 5px;
-    transition: border-bottom 0.3s ease;
+    transition: border-bottom 0.1s ease-in-out;
 
 }
 
 .search-text:focus {
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid var(--font-color);
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
-    text-underline-offset: 5px;
-}
+
 
 .photo-list {
     max-width: 1200px;
@@ -432,6 +442,8 @@ fieldset table td {
     padding: 5px 10px;
 }
 
+
+
 #hero {
     background-image: url('https://iutp.univ-poitiers.fr/wp-content/uploads/sites/100/2019/04/xIMG_0475copie.jpg.pagespeed.ic.W-nrcamBHR.webp');
     background-size: cover;
@@ -473,24 +485,71 @@ fieldset table td {
     background-color: var(--secondary-color);
 }
 
-.part-btn-container {
+#welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 4rem;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+#welcome-text {
+    grid-column: 1 / 2;
+}
+
+#welcome-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+#welcome-text ol {
+    list-style-type: none;
+    text-align: justify;
+    margin-left: 1.5rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+#welcome-text li {
+    margin-bottom: 1rem;
+}
+
+.attention-span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    color: #e74c3c;
     text-align: center;
-    margin-top: 20px;
+}
+
+.part-btn-container {
+    grid-column: 2 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .participate-btn {
     display: inline-block;
-    background-color: var(--accent-color);
+    background-color: #e74c3c;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
     text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
     transition: background-color 0.3s ease;
 }
 
 .participate-btn:hover {
-    background-color: var(--secondary-color);
+    background-color: #c0392b;
 }
+
 
 #contact {
     background-color: var(--primary-color);
@@ -572,7 +631,7 @@ input[type="text"]
 }
 input[type="text"]::placeholder {
     font-family: inherit;
-    color: whitesmoke;
+    color: var(--font-color);
     opacity: 0.7;
     opacity: 0.7;
 }
@@ -580,13 +639,13 @@ input[type="text"]::placeholder {
 /* Accessibility */
 input[type="text"]:-ms-input-placeholder {
     font-family: inherit;
-    color: whitesmoke !important;
+    color: var(--font-color) !important;
 }
 
 /* Accessibility */
 input[type="text"]::-ms-input-placeholder {
     font-family: inherit;
-    color: whitesmoke  !important;
+    color: var(--font-color)  !important;
 }
 
 /* Accessibility */
