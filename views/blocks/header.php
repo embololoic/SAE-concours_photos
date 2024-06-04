@@ -15,13 +15,13 @@
 <body>
 <header>
     <nav>
+        <a href="./index.php?route=welcome" class="title-icon"><i class="fa fa-lightbulb"></i></a>
         <ul>
-            <li><a href="./index.php?route=welcome"><i class="fa fa-lightbulb"></i></a></li>
-            <li class="centered"><a href="./index.php?route=upload">Participer</a></li>
-            <li class="centered"><a href="index.php?route=voter">Voter</a></li>
-            <li class="centered"><a href="index.php?route=resultats">Résultats</a></li>
+            <li><a href="./index.php?route=upload">Participer</a></li>
+            <li><a href="index.php?route=voter">Voter</a></li>
+            <li><a href="index.php?route=resultats">Résultats</a></li>
             <div class="search-bar">
-                <input type="text" placeholder="Rechercher des photos...">
+                <input type="text" class="search-text" placeholder="Rechercher des photos...">
                 <button type="submit"><i class="fa fa-search"></i> </button>
             </div>
         </ul>

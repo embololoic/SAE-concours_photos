@@ -1,5 +1,3 @@
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
 
 <?php
 session_start();
@@ -11,6 +9,7 @@ define('ROOT', 'ou=people,dc=univ-poitiers,dc=fr');
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $login = $_POST['login'];
     $pass = $_POST['pass'];
+    $error_login = "";
 
     $connex = ldap_connect(SERVER);
     ldap_set_option($connex, LDAP_OPT_PROTOCOL_VERSION, 3);
@@ -27,18 +26,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             if (ldap_bind($connex, $dn, $pass)) {
                 $_SESSION['user_id'] = $uid;
-                header('Location: ./index.php?route=welcome');
+                header('Location: index.php?route=welcome');
+                $error_login = "";
                 exit();
             } else {
-
-                echo "<p>Incorrect login or password.</p>";
+                $error_login = "Mot de passe incorrect.";
+                require('./views/login_view.php');
             }
         } else {
-            echo "<p>User not found.</p>";
+            $error_login = "Utilisateur n'existe pas";
+            require('./views/login_view.php');
         }
         ldap_close($connex);
     } else {
-        echo "Unable to connect to LDAP server.";
+        $error_login = "Connexion impossible au serveur LDAP";
+        require('./views/login_view.php');
     }
 }
 ?>

@@ -5,20 +5,18 @@
             <div id="bandeau" aria-labelledby="hero-title">
                 <h1 id="hero-title">IUT Châtellerault</h1>
                 <p id="hero-desc">Université de Poitiers - IUT Poitiers-Niort-Châtellerault</p>
-                <a href="#contact" aria-label="Contactez-nous">
-                    <i class="fas fa-envelope" aria-hidden="true"></i>
-                </a>
             </div>
         </section>
 
-        <nav aria-label="Navigation principale">
+
+        <!--<nav aria-label="Navigation principale">
             <ul>
                 <li><a href="#welcome">Concours Photo</a></li>
                 <li><a href="#instructions">Comment participer</a></li>
                 <li><a href="#prizes">Prix à remporter</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        </nav>-->
 
         <section id="welcome">
             <article id="welcome-text">
@@ -28,7 +26,7 @@
                     <li>Découvrez la magie de Châtellerault à travers l'objectif de votre appareil photo !</li>
                     <li>Notre concours vous invite à explorer la diversité de la ville sous des perspectives uniques. Que vous capturiez des scènes de vie de quartier, l'architecture emblématique ou des instants quotidiens, chaque photo est une chance de montrer votre talent!</li>
                 </ol>
-                <span class="attention-span">VOUS ATTENDEZ QUOI? PARTICIPEZ MAINTENANT :</span>
+                <span class="attention-span">VOUS ATTENDEZ QUOI? PARTICIPEZ MAINTENANT!</span>
             </article>
             <div class="part-btn-container">
                 <a href="#" class="participate-btn">Participer</a>

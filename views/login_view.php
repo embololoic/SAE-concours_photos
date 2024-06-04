@@ -8,13 +8,15 @@
 </head>
 
 <body>
-    <h1>Essai authentification LDAP</h1>
-
-    <form method="post" action="./index.php?route=login" enctype="multipart/form-data">
-        <label for="login">Login :</label><input type="text" id="login" name="login" />
-        <label for="pass">Mot de passe :</label><input type="password" id="pass" name="pass" />
-        <input type="submit" value="Valider">
-    </form>
+    <div class="container">
+        <h2>Authentification LDAP</h2>
+        <form method="post" action="./index.php?route=login" enctype="multipart/form-data" class="login-form">
+            <label for="login">Login :</label><input type="text" id="login" name="login" />
+            <label for="pass">Mot de passe :</label><input type="password" id="pass" name="pass" />
+            <input type="submit" value="Valider">
+        </form>
+        <p><?php echo $error_login; ?></p>
+    </div>
 
 </body>
 </html>
