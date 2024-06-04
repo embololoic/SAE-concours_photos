@@ -88,4 +88,5 @@
         </section>
     </main>
 
+*
 <?php require('./views/blocks/footer.php') ?>
