@@ -1,4 +1,4 @@
-<?php require('./views/blocks/header.php') ?>
+<?php require('./views/blocks/header.php')?>
 
 <body>
 <div class="container">
