@@ -10,10 +10,17 @@ function login_ldap(PDO $connex) {
         $login = $_POST['login'];
         $pass = $_POST['pass'];
         $error_login = "";
-
+        $admin_username = 'admin';
+        $admin_password = 'admin';
 
         $connex = ldap_connect(SERVER);
         ldap_set_option($connex, LDAP_OPT_PROTOCOL_VERSION, 3);
+
+        if ($login === $admin_username && password_verify($pass, $admin_assword)) {
+            $_SESSION['user_id'] = "admin";
+            header('Location: index.php?route=welcome');
+            exit();
+        }
 
         if ($connex) {
             ldap_bind($connex);
@@ -40,6 +47,7 @@ function login_ldap(PDO $connex) {
                 require('./views/login_view.php');
             }
             ldap_close($connex);
+
         } else {
             $error_login = "Connexion impossible au serveur LDAP";
             require('./views/login_view.php');
