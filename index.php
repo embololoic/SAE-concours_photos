@@ -1,7 +1,5 @@
 <?php
 // affichage des erreurs (periode de developpement)
-//error_reporting(~E_STRICT);
-//ini_set('display_errors', 1);
     //The front root controller
 
     //The requested route
@@ -26,7 +24,7 @@
             require('control/ctrl_login.php');
             check_login();
             require('control/ctrl_photo.php');
-
+            upload_photo_controller();
             break;
 
         case 'photos';

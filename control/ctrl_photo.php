@@ -3,19 +3,6 @@
 
 $legende = isset($_POST["legende"]) ? $_POST["legende"] : "Photo sans légende";
 
-function upload_photo()
-{
-        //database:
-        require('./models/connection.php');
-        $c = connection();
-        require('models/photo_model.php');
-        //upload_photo();
-
-        //view HTML
-        require('views/upload_view.php');
-
-}
-
 function list_photo(){
     // get connection
     require('./models/connection.php');
@@ -28,8 +15,6 @@ function list_photo(){
     require('./views/photo_view.php');
 
 }
-
-
 
 function upload_photo_controller() {
     require('./models/login_model.php');
