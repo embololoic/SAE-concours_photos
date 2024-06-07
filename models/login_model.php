@@ -11,15 +11,17 @@ function login_ldap(PDO $connex) {
         $pass = $_POST['pass'];
         $error_login = "";
         $admin_username = 'admin';
-        $admin_password = 'admin';
+        $admin_password_hash = password_hash('admin', PASSWORD_DEFAULT);
 
         $connex = ldap_connect(SERVER);
         ldap_set_option($connex, LDAP_OPT_PROTOCOL_VERSION, 3);
 
-        if ($login === $admin_username && password_verify($pass, $admin_assword)) {
-            $_SESSION['user_id'] = "admin";
-            header('Location: index.php?route=welcome');
-            exit();
+        if (isset($login) && isset($pass)) {
+            if ($login === $admin_username && password_verify($pass, $admin_password_hash)) {
+                $_SESSION['user_id'] = $admin_username;
+                header('Location: index.php?route=welcome');
+                exit();
+            }
         }
 
         if ($connex) {
