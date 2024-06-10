@@ -1,10 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concours Photo</title>
+    <link rel="stylesheet" type="text/css" href="./layout/global.css" />
+    <link rel="stylesheet" type="text/css" href="./layout/results.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
+<h2>VOUS ETES ADMIN, VOUS NE POUVEZ PAS PARTICIPER</h2>
 
-<body>
-<div class="container">
-<div class="upload-form">
-    <h1>test admin</h1>
-
-</body>
-
-<?php
+<?php require('./views/blocks/footer.php');?>
