@@ -31,7 +31,7 @@ function upload_photo_controller() {
             $user_id = 2;
         }
 
-        $target_dir = "./uploads/";
+        $target_dir = "/home/uploads/";
         $target_file = $target_dir . basename($_FILES["photo"]["name"]);
 
         if (!is_dir($target_dir)) {
