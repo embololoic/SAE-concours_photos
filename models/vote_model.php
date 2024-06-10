@@ -54,13 +54,11 @@ function ensure_user_exists($connex) {
     $count = $stmt->fetchColumn();
 
     if ($count == 0) {
-        // User doesn't exist, insert a new row
-        require_once('./models/login_model.php');
-        $login = login_ldap($connex);
+
 
         $stmt = $connex->prepare("INSERT INTO user (id, nom) VALUES (:user_id, :nom)");
         $stmt->bindParam(':user_id', $user_id);
-        $stmt->bindParam(':nom', $login);
+        $stmt->bindParam(':nom', $_SESSION["user_login"]);
         $stmt->execute();
     }
 }

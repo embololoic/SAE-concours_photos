@@ -1,4 +1,3 @@
-<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,14 +22,16 @@
             <li><a href="index.php?route=voter">Voter</a></li>
             <li><a href="index.php?route=resultats">Résultats</a></li>
           <?php
-            if(isset($_SESSION['user_id'])) {
+          //require_once('models/connection.php');
+          //$connex = connection();
+          //require_once('models/login_model.php');
+          //$login = login_ldap($connex);
                 echo "<div class='navbar-item dropdown'>
                         <a href='#' class='dropbtn'>" . $_SESSION['user_login'] . "</a>
                         <div class='dropdown-content'>
                             <a href='index.php?route=logout'>Se déconnecter</a>
                         </div>
                       </div>";
-            }
             ?>
             <div class="search-bar">
                 <input type="text" class="search-text" placeholder="Rechercher des photos...">
