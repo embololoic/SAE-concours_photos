@@ -45,6 +45,7 @@ function upload_photo_controller() {
         }
 
 
+      require('./views/upload_view.php');
 
       if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] === "admin") {
           require('./views/admin_vote.php');
