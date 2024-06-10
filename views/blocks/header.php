@@ -25,9 +25,9 @@
           <?php
             if(isset($_SESSION['user_id'])) {
                 echo "<div class='navbar-item dropdown'>
-                        <a href='#' class='dropbtn'>" . $_SESSION['user_id'] . "</a>
+                        <a href='#' class='dropbtn'>" . $_SESSION['user_login'] . "</a>
                         <div class='dropdown-content'>
-                            <a href='./logout.php'>Se déconnecter</a>
+                            <a href='index.php?route=logout'>Se déconnecter</a>
                         </div>
                       </div>";
             }

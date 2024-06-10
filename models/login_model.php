@@ -36,6 +36,7 @@ function login_ldap(PDO $connex) {
 
                 if (ldap_bind($connex, $dn, $pass)) {
                     $_SESSION['user_id'] = $uid;
+                     $_SESSION['user_login'] = $login; // login
                     header('Location: index.php?route=welcome');
                     $error_login = "";
                     exit();

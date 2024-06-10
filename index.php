@@ -55,6 +55,11 @@
             user_login();
             break;
 
+        case 'logout':
+            require('control/ctrl_logout.php');
+
+            break;
+
       # les controleurs :
         default:
             require('views/404_view.php');
