@@ -27,7 +27,7 @@
           //require_once('models/login_model.php');
           //$login = login_ldap($connex);
                 echo "<div class='navbar-item dropdown'>
-                        <a href='#' class='dropbtn'>" . $_SESSION['user_login'] . "</a>
+                        <a href='#' class='dropbtn'> " . $_SESSION['user_login'] . " <i class='fa-solid fa-user' aria-hidden='true' style='padding-left: 5px;'></i></a>
                         <div class='dropdown-content'>
                             <a href='index.php?route=logout'>Se déconnecter</a>
                         </div>

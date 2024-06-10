@@ -25,11 +25,6 @@ function upload_photo_controller() {
     require('./models/photo_model.php');
         $legende = $_POST["legende"];
 
-        if ($_SESSION['user_id'] == "admin") {
-            $user_id = 1;
-        } else {
-            $user_id = 2;
-        }
 
         $target_dir = "/home/uploads/";
         $target_file = $target_dir . basename($_FILES["photo"]["name"]);
@@ -45,7 +40,7 @@ function upload_photo_controller() {
         }
 
 
-      if (isset($_SESSION["user_id"]) && $_SESSION["user_id"] === "admin") {
+      if (isset($_SESSION["user_login"]) && $_SESSION["user_login"] === "admin") {
           require('./views/admin_vote.php');
       } else {
           require('./views/upload_view.php');
