@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,9 +18,20 @@
     <nav>
         <a href="./index.php?route=welcome" class="title-icon"><i class="fa fa-lightbulb"></i></a>
         <ul>
+
             <li><a href="./index.php?route=upload">Participer</a></li>
             <li><a href="index.php?route=voter">Voter</a></li>
             <li><a href="index.php?route=resultats">Résultats</a></li>
+          <?php
+            if(isset($_SESSION['user_id'])) {
+                echo "<div class='navbar-item dropdown'>
+                        <a href='#' class='dropbtn'>" . $_SESSION['user_id'] . "</a>
+                        <div class='dropdown-content'>
+                            <a href='./logout.php'>Se déconnecter</a>
+                        </div>
+                      </div>";
+            }
+            ?>
             <div class="search-bar">
                 <input type="text" class="search-text" placeholder="Rechercher des photos...">
                 <button type="submit"><i class="fa fa-search"></i> </button>

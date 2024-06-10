@@ -6,6 +6,7 @@ function user_login()
     $connex = connection();
     // call CRUD
     require('./models/login_model.php');
+
     $photos = login_ldap($connex);
 
 }
