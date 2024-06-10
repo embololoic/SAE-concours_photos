@@ -41,6 +41,8 @@
             check_login();
             require('control/ctrl_photo.php');
             list_photo();
+            require('control/ctrl_vote.php');
+            vote_add_controller();
             break;
 
         case 'resultats':
