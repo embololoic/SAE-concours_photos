@@ -29,7 +29,7 @@
                 echo "<div class='navbar-item dropdown'>
                         <a href='#' class='dropbtn'> " . $_SESSION['user_login'] . " <i class='fa-solid fa-user' aria-hidden='true' style='padding-left: 5px;'></i></a>
                         <div class='dropdown-content'>
-                            <a href='index.php?route=logout'>Se déconnecter</a>
+                            <a href='index.php?route=logout'>Se déconnecter <i class='fa-solid fa-right-from-bracket'></i></a>
                         </div>
                       </div>";
             ?>

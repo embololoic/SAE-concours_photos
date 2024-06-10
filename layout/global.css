@@ -800,3 +800,4 @@ input[type="text"]:-webkit-autofill:active {
     display: inline-block;
 }
 
+.dropdown-content {transform: translateX(-35%)}
