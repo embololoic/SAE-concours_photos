@@ -24,7 +24,7 @@ function upload_photo_controller() {
     $connex = connection();
     require('./models/photo_model.php');
         $legende = $_POST["legende"];
-        $user_id = $uid;
+        $user_id = 1;
 
         $target_dir = "./uploads/";
         $target_file = $target_dir . basename($_FILES["photo"]["name"]);
