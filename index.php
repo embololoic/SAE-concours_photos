@@ -53,12 +53,8 @@
             user_login();
             break;
 
-
-
       # les controleurs :
         default:
             require('views/404_view.php');
             break;
-
-
     }

@@ -13,9 +13,25 @@ function user_login()
 function check_login()
 {
         session_start();
-        if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
+        if (empty($_SESSION['user_id'])) {
               header("Location: ./index.php");
               exit();
         }
+
+}
+
+function unset_login()
+{
+      session_start();
+      if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
+
+            header("Location: ./index.php");
+            exit();
+      } else {
+            unset($_SESSION['user_id']);
+            session_destroy();
+            header("Location: ./index.php");
+            exit();
+      }
 
 }
