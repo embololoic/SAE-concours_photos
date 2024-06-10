@@ -1,4 +1,4 @@
-<?php require('./views/blocks/header.php') ?>
+<?php require('./views/blocks/header.php')?>
 
 <!DOCTYPE html>
 <html>
@@ -15,7 +15,9 @@
             <label for="pass">Mot de passe :</label><input type="password" id="pass" name="pass" />
             <input type="submit" value="Valider">
         </form>
-        <p><?php echo $error_login; ?></p>
+        <p><?php echo $error_login;
+        $error_login=0;
+        ?></p>
     </div>
 
 </body>

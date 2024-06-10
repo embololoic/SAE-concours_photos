@@ -20,6 +20,7 @@ function login_ldap(PDO $connex) {
             if ($login === $admin_username && password_verify($pass, $admin_password_hash)) {
                 $_SESSION['user_id'] = $admin_username;
                 header('Location: index.php?route=welcome');
+                $error_login = "";
                 exit();
             }
         }
@@ -36,8 +37,10 @@ function login_ldap(PDO $connex) {
 
                 if (ldap_bind($connex, $dn, $pass)) {
                     $_SESSION['user_id'] = $uid;
+                    $username_session=$login
                     header('Location: index.php?route=welcome');
                     $error_login = "";
+
                     exit();
                 } else {
                     $error_login = "Mot de passe incorrect.";

@@ -13,6 +13,7 @@
     //We switch to the good controller
     switch ($route) {
         case null:
+            $error_login = "";
             require('views/login_view.php');
             break;
 
