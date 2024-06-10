@@ -58,8 +58,8 @@
             break;
 
         case 'logout':
-            require('control/ctrl_logout.php');
-
+            require('control/ctrl_login.php');
+            user_logout();
             break;
 
       # les controleurs :

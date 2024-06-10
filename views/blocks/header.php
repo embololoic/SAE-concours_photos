@@ -33,10 +33,10 @@
                         </div>
                       </div>";
             ?>
-            <div class="search-bar">
+          <!--  <div class="search-bar">
                 <input type="text" class="search-text" placeholder="Rechercher des photos...">
-                <button type="submit"><i class="fa fa-search"></i> </button>
-            </div>
+               <button type="submit"><i class="fa fa-search"></i> </button>
+            </div> -->
         </ul>
     </nav>
 </header>

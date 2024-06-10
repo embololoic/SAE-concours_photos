@@ -19,11 +19,13 @@ function login_ldap(PDO $connex) {
 
         if (isset($login) && isset($pass)) {
             if ($login === $admin_username && password_verify($pass, $admin_password_hash)) {
-                $_SESSION['user_id'] = $admin_username;
+                $_SESSION['user_id'] = 1;
+                $_SESSION['user_login'] = $admin_username;
                 header('Location: index.php?route=welcome');
                 exit();
             } elseif ($login === "etudiant" && password_verify($pass, $etudiant_password_hash)) {
-                $_SESSION['user_id'] = "etudiant";
+                $_SESSION['user_id'] = 2;
+                $_SESSION['user_login'] = "etudiant";
                 header('Location: index.php?route=welcome');
                 exit();
             }
