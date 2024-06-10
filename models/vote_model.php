@@ -28,3 +28,39 @@ function vote_dump(PDO $connex) {
         'votes_total' => $votes_total
     );
 }
+
+
+function vote_add(PDO $connex, $user_id, $photo_id) {
+    $req = "INSERT INTO vote (photo_id, user_id2) VALUES (:photo_id, :user_id)";
+    $prep = $connex->prepare($req);
+    $prep->bindParam(':photo_id', $photo_id, PDO::PARAM_INT);
+    $prep->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+
+    if ($prep->execute()) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+function ensure_user_exists($connex) {
+    $user_id = $_SESSION['user_id'];
+
+    // Check if the user exists in the user table
+    $stmt = $connex->prepare("SELECT COUNT(*) FROM user WHERE id = :user_id");
+    $stmt->bindParam(':user_id', $user_id);
+    $stmt->execute();
+    $count = $stmt->fetchColumn();
+
+    if ($count == 0) {
+        // User doesn't exist, insert a new row
+        require_once('./models/login_model.php');
+        $login = login_ldap($connex);
+
+        $stmt = $connex->prepare("INSERT INTO user (id, nom) VALUES (:user_id, :nom)");
+        $stmt->bindParam(':user_id', $user_id);
+        $stmt->bindParam(':nom', $login);
+        $stmt->execute();
+    }
+}
