@@ -16,5 +16,15 @@ class AdminView {
         echo "<input type='submit' name='validate_votes' value='Valider les votes'>";
         echo "<input type='submit' name='validate_photos' value='Valider les photos'>";
         echo "</form>";
+
     }
+    public function displayUsersWhoVoted($users) {
+    echo "<h1>Utilisateurs qui ont voté</h1>";
+    echo "<ul>";
+    foreach ($users as $user) {
+        echo "<li>" . htmlspecialchars($user['nom']) . " " . htmlspecialchars($user['prenom']) . "</li>";
+    }
+    echo "</ul>";
 }
+}
+

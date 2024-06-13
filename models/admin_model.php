@@ -24,4 +24,10 @@ class AdminModel {
         $query->execute();
         return $query->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function getUsersWhoVoted() {
+    // Select all unique users who have voted
+    $query = $this->db->prepare("SELECT DISTINCT user.id, user.nom, user.prenom FROM user INNER JOIN vote ON user.id = vote.user_id2");
+    $query->execute();
+    return $query->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

@@ -8,9 +8,11 @@ class AdminController {
     private $view;
 
     public function __construct() {
-        $db = connection(); // Créez l'objet de connexion à la base de données
-        $this->model = new AdminModel($db); // Passez l'objet de connexion à la base de données à la classe AdminModel
+        $db = connection(); // Create the database connection object
+        $this->model = new AdminModel($db); // Pass the database connection object to the AdminModel class
         $this->view = new AdminView();
+        $usersWhoVoted = $this->model->getUsersWhoVoted();
+        $this->view->displayUsersWhoVoted($usersWhoVoted);
     }
 
     public function validateVotes() {
@@ -27,4 +29,5 @@ class AdminController {
         $results = $this->model->getResults();
         $this->view->displayResults($results);
     }
+
 }
