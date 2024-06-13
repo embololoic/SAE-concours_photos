@@ -1,10 +1,10 @@
+
 <?php
 session_start();
 
 // Configuration for the LDAP server
 define('SERVER', 'ldaps://ldapsupannappli.univ-poitiers.fr:636');
 define('ROOT', 'ou=people,dc=univ-poitiers,dc=fr');
-
 function login_ldap(PDO $connex) {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $login = $_POST['login'];
@@ -32,50 +32,37 @@ function login_ldap(PDO $connex) {
         }
 
         if ($connex) {
-            $ldap_bind = ldap_bind($connex);
-            if ($ldap_bind) {
-                $req = 'supannAliasLogin=' . $login;
-                $res = ldap_search($connex, ROOT, $req);
-                if ($res !== false) {
-                    $entries = ldap_get_entries($connex, $res);
+            ldap_bind($connex);
+            $req = 'supannAliasLogin=' . $login;
+            $res = ldap_search($connex, ROOT, $req);
+            $entries = ldap_get_entries($connex, $res);
 
-                    if ($entries['count'] > 0) {
-                        $uid = $entries[0]['uid'][0];
-                        $dn = 'uid=' . $uid . ',' . ROOT;
+            if ($entries['count'] > 0) {
+                $uid = $entries[0]['uid'][0];
+                $dn = 'uid=' . $uid . ',' . ROOT;
 
-                        if (ldap_bind($connex, $dn, $pass)) {
-                            $_SESSION['user_id'] = $uid;
-                            $_SESSION['user_login'] = $login; // login
-                            header('Location: index.php?route=welcome');
-                            $error_login = "";
-                            exit();
-                        } else {
-                            $error_login = "Mot de passe incorrect.";
-                            require('./views/login_view.php');
-                        }
-                    } else {
-                        $error_login = "Utilisateur n'existe pas";
-                        require('./views/login_view.php');
-                    }
+                if (ldap_bind($connex, $dn, $pass)) {
+                    $_SESSION['user_id'] = $uid;
+                     $_SESSION['user_login'] = $login; // login
+                    header('Location: index.php?route=welcome');
+                    $error_login = "";
+                    exit();
                 } else {
-                    $error_login = "La recherche LDAP a échoué : " . ldap_error($connex);
+                    $error_login = "Mot de passe incorrect.";
                     require('./views/login_view.php');
+
                 }
             } else {
-                $error_login = "Connexion impossible au serveur LDAP";
+                $error_login = "Utilisateur n'existe pas";
                 require('./views/login_view.php');
             }
             ldap_close($connex);
+
         } else {
             $error_login = "Connexion impossible au serveur LDAP";
             require('./views/login_view.php');
         }
     }
 
-    // Ajout des instructions de débogage
-    echo "Dernière erreur : ";
-    var_dump(error_get_last());
-    echo "Erreur de connexion : ";
-    var_dump($error_login);
 }
 ?>

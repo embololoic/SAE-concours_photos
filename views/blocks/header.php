@@ -26,6 +26,9 @@
           //$connex = connection();
           //require_once('models/login_model.php');
           //$login = login_ldap($connex);
+             if ($_SESSION['user_login'] == 'admin') {
+                echo '<li><a href="index.php?route=admin&action=showResults">Gestion</a></li>';
+            }
                 echo "<div class='navbar-item dropdown'>
                         <a href='#' class='dropbtn'> " . $_SESSION['user_login'] . " <i class='fa-solid fa-user' aria-hidden='true' style='padding-left: 5px;'></i></a>
                         <div class='dropdown-content'>
