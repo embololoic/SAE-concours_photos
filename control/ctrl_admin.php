@@ -17,17 +17,17 @@ class AdminController {
 
     public function validateVotes() {
         $this->model->validateVotes();
-        // Mettre à jour la vue en conséquence
+        // Update the view accordingly
     }
 
     public function validatePhotos() {
         $this->model->validatePhotos();
-        // Mettre à jour la vue en conséquence
+        // Update the view accordingly
     }
 
     public function showResults() {
-        $results = $this->model->getResults();
-        $this->view->displayResults($results);
+        $voteResults = $this->model->getVoteResults();
+        $photoResults = $this->model->getPhotoResults();
+        $this->view->displayResults($voteResults, $photoResults);
     }
-
 }
