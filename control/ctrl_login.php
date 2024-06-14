@@ -24,13 +24,10 @@ function check_login()
 function check_admin()
 {
         session_start();
-        if ($_SESSION['user_id'] == 1) {
-              require('control/ctrl_vote.php');
-              fetch_votes();
-              exit();
-        } else {
-              header("Location: ./index.php?route=welcome");
-        }
+        if ($_SESSION['user_id'] !== 1) {
+          header("Location: ./index.php?route=welcome");
+          exit();
+        } 
 
 }
 
