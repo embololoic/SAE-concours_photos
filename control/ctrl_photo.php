@@ -29,7 +29,7 @@ function upload_photo_controller() {
         $target_file = $target_dir . basename($_FILES["photo"]["name"]);
 
         if (!is_dir($target_dir)) {
-            mkdir($target_dir, 0777, true);
+            mkdir($target_dir, 0755, true);
         }
         if (move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)) {
             insert_photo($connex, $target_file, $legende, $user_id);

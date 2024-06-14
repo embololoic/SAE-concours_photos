@@ -32,20 +32,29 @@ function vote_dump(PDO $connex) {
 
 
 function vote_add(PDO $connex, $user_id, $photo_id) {
-    $req = "INSERT INTO vote (photo_id, user_id2) VALUES (:photo_id, :user_id)";
-    $prep = $connex->prepare($req);
-    $prep->bindParam(':photo_id', $photo_id, PDO::PARAM_INT);
-    $prep->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt = $connex->prepare("SELECT COUNT(*) FROM vote WHERE user_id2 = :user_id");
+    $stmt->bindParam(':user_id', $user_id);
+    $stmt->execute();
+    $count = $stmt->fetchColumn();
 
-    if ($prep->execute()) {
-        return true;
+    if($count == 0) {
+        $req = "INSERT INTO vote (photo_id, user_id2) VALUES (:photo_id, :user_id)";
+        $prep = $connex->prepare($req);
+        $prep->bindParam(':photo_id', $photo_id, PDO::PARAM_INT);
+        $prep->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+
+        if ($prep->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     } else {
-        return false;
+        echo 'Vous avez déjà voté une seule fois, merci !';
     }
-
 }
 
 function ensure_user_exists($connex) {
+
     $user_id = $_SESSION['user_id'];
     $stmt = $connex->prepare("SELECT COUNT(*) FROM user WHERE id = :user_id");
     $stmt->bindParam(':user_id', $user_id);
@@ -53,17 +62,9 @@ function ensure_user_exists($connex) {
     $count = $stmt->fetchColumn();
 
     if ($count == 0) {
-
-
         $stmt = $connex->prepare("INSERT INTO user (id, nom) VALUES (:user_id, :nom)");
         $stmt->bindParam(':user_id', $user_id);
         $stmt->bindParam(':nom', $_SESSION["user_login"]);
         $stmt->execute();
-    } else {
-        $error_message = 'Vous avez déjà voté une seule fois, merci !';
-        echo 'Vous avez déjà voté une seule fois, merci !';
-
     }
-
-    return $error_message;
 }
