@@ -8,23 +8,26 @@ class AdminController {
     private $view;
 
     public function __construct() {
-        $db = connection(); // Créez l'objet de connexion à la base de données
-        $this->model = new AdminModel($db); // Passez l'objet de connexion à la base de données à la classe AdminModel
+        $db = connection(); // Create the database connection object
+        $this->model = new AdminModel($db); // Pass the database connection object to the AdminModel class
         $this->view = new AdminView();
+        $usersWhoVoted = $this->model->getUsersWhoVoted();
+        $this->view->displayUsersWhoVoted($usersWhoVoted);
     }
 
     public function validateVotes() {
         $this->model->validateVotes();
-        // Mettre à jour la vue en conséquence
+        // Update the view accordingly
     }
 
     public function validatePhotos() {
         $this->model->validatePhotos();
-        // Mettre à jour la vue en conséquence
+        // Update the view accordingly
     }
 
     public function showResults() {
-        $results = $this->model->getResults();
-        $this->view->displayResults($results);
+        $voteResults = $this->model->getVoteResults();
+        $photoResults = $this->model->getPhotoResults();
+        $this->view->displayResults($voteResults, $photoResults);
     }
 }
