@@ -27,31 +27,15 @@ function check_admin()
         if ($_SESSION['user_id'] !== 1) {
           header("Location: ./index.php?route=welcome");
           exit();
-        } 
+        }
 
 }
 
-function unset_login()
-{
-      session_start();
-      if (!isset($_SESSION['user_id']) || empty($_SESSION['user_id'])) {
-
-            header("Location: ./index.php");
-            exit();
-      } else {
-            unset($_SESSION['user_id']);
-            session_destroy();
-            header("Location: ./index.php");
-            exit();
-      }
-
-}
 
 function user_logout() {
     session_start();
 
     $_SESSION = array();
-
 
     session_destroy();
 
