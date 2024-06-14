@@ -4,9 +4,7 @@ function user_login()
 {
     require('./models/connection.php');
     $connex = connection();
-    // call CRUD
     require('./models/login_model.php');
-
     $photos = login_ldap($connex);
 
 }
@@ -34,11 +32,8 @@ function check_admin()
 
 function user_logout() {
     session_start();
-
     $_SESSION = array();
-
     session_destroy();
-
     header("Location: ./index.php");
     exit();
 }
