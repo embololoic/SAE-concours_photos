@@ -61,11 +61,6 @@ function login_ldap(PDO $connex)
                 }
             }
         }
-        // Ajout des instructions de débogage
-        echo "Dernière erreur : ";
-        var_dump(error_get_last());
-        echo "Erreur de connexion : ";
-        var_dump($error_login);
     }
 }
 ?>
