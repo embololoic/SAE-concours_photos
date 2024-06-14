@@ -5,7 +5,8 @@ session_start();
 define('SERVER', 'ldaps://ldapsupannappli.univ-poitiers.fr:636');
 define('ROOT', 'ou=people,dc=univ-poitiers,dc=fr');
 
-function login_ldap(PDO $connex) {
+function login_ldap(PDO $connex)
+{
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $login = $_POST['login'];
         $pass = $_POST['pass'];
@@ -21,7 +22,7 @@ function login_ldap(PDO $connex) {
             if ($login === $admin_username && password_verify($pass, $admin_password_hash)) {
                 $_SESSION['user_id'] = 1;
                 $_SESSION['user_login'] = $admin_username;
-                header('Location: index.php?route=welcome');
+                require('./views/admin_view.php');
                 exit();
             } elseif ($login === "etudiant" && password_verify($pass, $etudiant_password_hash)) {
                 $_SESSION['user_id'] = 2;
@@ -57,25 +58,14 @@ function login_ldap(PDO $connex) {
                         $error_login = "Utilisateur n'existe pas";
                         require('./views/login_view.php');
                     }
-                } else {
-                    $error_login = "La recherche LDAP a échoué : " . ldap_error($connex);
-                    require('./views/login_view.php');
                 }
-            } else {
-                $error_login = "Connexion impossible au serveur LDAP";
-                require('./views/login_view.php');
             }
-            ldap_close($connex);
-        } else {
-            $error_login = "Connexion impossible au serveur LDAP";
-            require('./views/login_view.php');
         }
+        // Ajout des instructions de débogage
+        echo "Dernière erreur : ";
+        var_dump(error_get_last());
+        echo "Erreur de connexion : ";
+        var_dump($error_login);
     }
-
-    // Ajout des instructions de débogage
-    echo "Dernière erreur : ";
-    var_dump(error_get_last());
-    echo "Erreur de connexion : ";
-    var_dump($error_login);
 }
 ?>

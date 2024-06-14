@@ -50,9 +50,10 @@
             <div class="photo-container">
                 <img src="<?php echo $vote['file_path']; ?>" alt="<?php echo $vote['file_path']; ?>">
                 <div>
-                    <p>La photo <?php echo $vote['id']; ?> a <?php echo $vote['total_votes']; ?> <?php echo ($vote['total_votes'] == 1) ? 'vote' : 'votes'; ?></p>                </div>
+                    <p>La photo (<?php echo $vote['id']; ?>) uploadée par , a <?php echo $vote['total_votes']; ?> <?php echo ($vote['total_votes'] == 1) ? 'vote' : 'votes'; ?></p>                </div>
             </div>
         <?php endforeach; ?>
+
     </div>
 
 <?php require('./views/blocks/footer.php'); ?>

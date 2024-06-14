@@ -23,6 +23,7 @@ function vote_dump(PDO $connex) {
     $votes_total = $prep_sum->fetchColumn();
     $prep_sum->closeCursor();
 
+
     return array(
         'votes_by_photo' => $votes_by_photo,
         'votes_total' => $votes_total

@@ -1,4 +1,5 @@
 <?php
+require ('./views/blocks/header.php');
 class AdminView {
     public function displayResults($results) {
         echo "<h1>Résultats des votes</h1>";
@@ -18,3 +19,5 @@ class AdminView {
         echo "</form>";
     }
 }
+
+require('./views/blocks/header.php');

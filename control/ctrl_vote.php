@@ -9,6 +9,7 @@ function fetch_votes() {
     $result = vote_dump($c);
     $votes_by_photo = $result['votes_by_photo'];
     $votes_total = $result['votes_total'];
+   // $user_upload = $result['user_upload'];
 
     //view HTML
     require('./views/result_view.php');

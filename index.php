@@ -64,28 +64,9 @@
 
         case 'admin':
         require('control/ctrl_login.php');
-        check_login(); // Assurez-vous que l'utilisateur est connecté et a les droits d'administration
+        check_login();
         require('control/ctrl_admin.php');
-        $adminController = new AdminController();
-        $action = null;
-        if (isset($_GET['action'])) {
-            $action = $_GET['action'];
-        }
-        switch ($action) {
-            case 'validateVotes':
-                $adminController->validateVotes();
-                break;
-            case 'validatePhotos':
-                $adminController->validatePhotos();
-                break;
-            case 'showResults':
-                $adminController->showResults();
-                break;
-            default:
-                echo "Action d'administration non reconnue.";
-                break;
-        }
-    break;
+        break;
 
       # les controleurs :
         default:

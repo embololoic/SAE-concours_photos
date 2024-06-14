@@ -13,11 +13,14 @@
         <br><br>
         <input type="submit" value="Participer!">
     </form>
-    <?php if (isset($error_message)) { ?>
+    <?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+    if (isset($error_message)) { ?>
         <p style="color: red; padding: 12px;"><?php echo $error_message; ?></p>
-    <?php } else if(isset($success_message)) {?>
+    <?php } elseif(isset($success_message)) {?>
     <p style="color: green; padding: 12px;"><?php echo $success_message; ?></p>
-    <?php } ?>
+    <?php }
+}?>
 </div></div>
 </body>
 

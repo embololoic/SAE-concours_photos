@@ -18,15 +18,14 @@ function list_photo(){
 
 function upload_photo_controller() {
     require('./models/login_model.php');
-    $error_message = "";
-    $success_message = "";
+
     require('./models/connection.php');
     $connex = connection();
     require('./models/photo_model.php');
         $legende = $_POST["legende"];
+        $user_id = $_SESSION['user_id'];
 
-
-        $target_dir = "/home/uploads/";
+        $target_dir = "./uploads/";
         $target_file = $target_dir . basename($_FILES["photo"]["name"]);
 
         if (!is_dir($target_dir)) {
