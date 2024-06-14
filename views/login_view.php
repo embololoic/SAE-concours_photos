@@ -16,6 +16,7 @@
 
 <body>
     <div class="container">
+        <img src="./layout/images/up.png" style="max-height : 100px;">
         <h2>Authentification LDAP</h2>
         <form method="post" action="./index.php?route=login" enctype="multipart/form-data" class="login-form">
             <label for="login">Login :</label><input type="text" id="login" name="login" />
