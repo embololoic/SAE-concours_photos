@@ -48,6 +48,8 @@
         case 'resultats':
             require('control/ctrl_login.php');
             check_login();
+            check_admin();
+
             require('control/ctrl_vote.php');
             fetch_votes();
             break;
