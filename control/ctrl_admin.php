@@ -25,7 +25,9 @@ class AdminController {
         // Update the view accordingly
     }
 
-    public function showResults() {
+    function show_results() {
+        require('./views/result_view.php');
+
         $voteResults = $this->model->getVoteResults();
         $photoResults = $this->model->getPhotoResults();
         $this->view->displayResults($voteResults, $photoResults);

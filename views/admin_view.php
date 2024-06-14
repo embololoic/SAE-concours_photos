@@ -1,14 +1,6 @@
 <?php
 require ('./views/blocks/header.php');
 class AdminView {
-    public function displayHeader() {
-        include './views/blocks/header.php';
-    }
-
-    public function displayFooter() {
-        include './views/blocks/footer.php';
-    }
-
     public function displayResults($voteResults, $photoResults) {
 
         echo "<h1>Résultats des votes</h1>";
@@ -40,4 +32,4 @@ class AdminView {
     }
 }
 
-require('./views/blocks/header.php');
+require('./views/blocks/footer.php');
