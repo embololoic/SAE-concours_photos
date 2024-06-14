@@ -47,8 +47,6 @@ function vote_add(PDO $connex, $user_id, $photo_id) {
 
 function ensure_user_exists($connex) {
     $user_id = $_SESSION['user_id'];
-
-    // Check if the user exists in the user table
     $stmt = $connex->prepare("SELECT COUNT(*) FROM user WHERE id = :user_id");
     $stmt->bindParam(':user_id', $user_id);
     $stmt->execute();
@@ -61,5 +59,11 @@ function ensure_user_exists($connex) {
         $stmt->bindParam(':user_id', $user_id);
         $stmt->bindParam(':nom', $_SESSION["user_login"]);
         $stmt->execute();
+    } else {
+        $error_message = 'Vous avez déjà voté une seule fois, merci !';
+        echo 'Vous avez déjà voté une seule fois, merci !';
+
     }
+
+    return $error_message;
 }

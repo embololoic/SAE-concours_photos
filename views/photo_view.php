@@ -2,11 +2,7 @@
 
 <div class="photo-list">
     <h2>Etudiants et professeurs de l'IUT, votre voix compte! Rejoignez-nous pour voter et sélectionner la meilleure photo de ce concours exceptionnel.</h2>
-    <?php if (isset($error_message)) { ?>
-        <p style="color: red; padding: 12px;"><?php echo $error_message; ?></p>
-    <?php } else if(isset($success_message)) {?>
-        <p style="color: green; padding: 12px;"><?php echo $success_message; ?></p>
-    <?php } ?>
+    <h2> <?php echo $error_message ?> </h2>
     <form method="post" action="./index.php?route=voter" enctype="multipart/form-data">
         <fieldset>
             <caption>TEMPS RESTANT ...</caption>

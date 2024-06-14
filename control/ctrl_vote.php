@@ -24,7 +24,7 @@ function vote_add_controller()
 
     // Check if the user is logged in
     if ($_SESSION["user_id"] == "admin" or $_SESSION["user_id"] == "etudiant") {
-        $error_message = "Les administrateurs et les comptes test ne votent pas ici.";
+        echo "Les administrateurs et les comptes test ne votent pas ici.";
         return;
    }
 
@@ -40,5 +40,6 @@ function vote_add_controller()
     } else {
         $error_message = "Votre vote n'a pas été pris en compte, veuillez réssayer! ";
     }
+
 
 }
