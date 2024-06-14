@@ -21,6 +21,18 @@ function check_login()
 
 }
 
+function check_admin()
+{
+        session_start();
+        if ($_SESSION['user_id'] == 1) {
+              require('./views/admin_view.php');
+              exit();
+        } else {
+              header("Location: ./index.php?route=welcome");
+        }
+
+}
+
 function unset_login()
 {
       session_start();

@@ -64,4 +64,3 @@ function login_ldap(PDO $connex)
     }
 }
 ?>
-

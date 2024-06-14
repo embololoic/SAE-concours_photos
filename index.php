@@ -65,6 +65,7 @@
         case 'admin':
         require('control/ctrl_login.php');
         check_login();
+        check_admin();
         require('control/ctrl_admin.php');
         break;
 
